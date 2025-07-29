@@ -1,0 +1,36 @@
+services:
+  # PostgreSQL Database
+  - type: pserv
+    name: linkedgen-pro-db
+    env: postgresql
+    plan: free
+    ipAllowList: []
+    
+  # Backend API
+  - type: web
+    name: linkedgen-pro-api
+    env: node
+    plan: free
+    buildCommand: cd backend && npm install && npm run build
+    startCommand: cd backend && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: DATABASE_URL
+        fromDatabase:
+          name: linkedgen-pro-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: APOLLO_API_KEY
+        sync: false
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false
+      - key: FRONTEND_URL
+        value: https://linkedgen-pro.vercel.app 
