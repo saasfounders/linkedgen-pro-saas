@@ -25,12 +25,12 @@ services:
       - key: JWT_SECRET
         generateValue: true
       - key: OPENAI_API_KEY
-        sync: false
+        value: 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
       - key: APOLLO_API_KEY
-        sync: false
+        value: 8YOc8ZiUxcXOQzvulGNFgw
       - key: TELEGRAM_BOT_TOKEN
-        sync: false
+        value: 8479434590:AAG1lyWGY-D94GHAXePUk50Y9EuZh4sdE1g
       - key: TELEGRAM_CHAT_ID
-        sync: false
+        value: 364944570
       - key: FRONTEND_URL
-        value: https://linkedgen-pro.vercel.app 
+        value: https://linkedgen-pro-saas.vercel.app 
