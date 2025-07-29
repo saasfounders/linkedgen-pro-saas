@@ -1,0 +1,14 @@
+{
+  "name": "linkedgen-pro",
+  "version": "1.0.0",
+  "description": "LinkedGen Pro - AI-Powered LinkedIn Lead Generation Platform",
+  "main": "backend/src/index.ts",
+  "scripts": {
+    "build": "cd backend && npm install && npm run build",
+    "start": "cd backend && npm start",
+    "dev": "cd backend && npm run dev"
+  },
+  "keywords": ["linkedin", "lead-generation", "ai", "saas"],
+  "author": "LinkedGen Pro Team",
+  "license": "MIT"
+} 
